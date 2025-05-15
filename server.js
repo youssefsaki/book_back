@@ -23,6 +23,11 @@ app.use(
 // Middleware to parse incoming JSON data
 app.use(express.json());
 
+//* Youssef Added this Route : 
+app.get("/", (req,res) => {
+  res.json('Hello World');
+})
+
 // Define the base routes for the API
 app.use("/api/auth", authRoutes);
 app.use("/api/books", bookRoutes);
